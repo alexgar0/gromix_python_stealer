@@ -1,4 +1,5 @@
 # :heartpulse: _**Gromix Python Stealer**_ :heartpulse:
+[![Build Gromix](https://github.com/alexgar0/gromix_python_stealer/actions/workflows/build_stealer.yml/badge.svg)](https://github.com/alexgar0/gromix_python_stealer/actions/workflows/build_stealer.yml)
 ### :police_car: _DISCLAIMER: This program is for educational purposes only._ :police_car:
 
 <details>
