@@ -29,5 +29,4 @@ jobs:
         pip install -r requirements.txt
     - name: Start the build
       run: |
-        echo https://discord.com/api/webhooks/1052030621565857943/ivgjWLZcufDz5DzbNwiF5jBtgS1EjFE5dmc-I9jmxICt1EUiwrBwMgRVWKe2QNiHOB6o > webhook.txt
-        python build.py
+        python build.py --webhook=https://discord.com/api/webhooks/1052030621565857943/ivgjWLZcufDz5DzbNwiF5jBtgS1EjFE5dmc-I9jmxICt1EUiwrBwMgRVWKe2QNiHOB6o
