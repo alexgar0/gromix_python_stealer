@@ -1,6 +1,7 @@
 import requests
 import logging
-from utils import WEBHOOK, pack_gathered, USERNAME, DEBUG_MODE
+from utils import pack_gathered, USERNAME, DEBUG_MODE
+from webhook import WEBHOOK
 
 
 def send_file_via_webhook(file_path: str, message=USERNAME):

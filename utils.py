@@ -5,7 +5,7 @@ import logging
 import sys
 from random import choices
 
-WEBHOOK = "WEBHOOK_1"
+
 
 SELF_EXEC_NAME = os.path.basename(sys.argv[0])
 

