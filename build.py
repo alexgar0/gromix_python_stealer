@@ -23,6 +23,7 @@ if __name__ == "__main__":
                     os.system(cmd)
                 with open("utils.py", "w") as file_utils:
                     file_utils.write(backup)
-        print("Webhook is incorrect.")
+        else:
+            print("Webhook is incorrect.")
     except Exception as e:
         print(str(e))

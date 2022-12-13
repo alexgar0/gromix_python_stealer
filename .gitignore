@@ -55,7 +55,12 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
-.webhook.txt
+stealer.build/
+stealer.onefile-build/
+stealer.dist/
+my_file.txt
+stealer.exe
+webhook.txt
 develop-eggs/
 dist/
 downloads/
