@@ -30,10 +30,16 @@ Just put your Discord webhook inside _webhook.txt_ file. Then:
 ```console
 python build.py
 ```
+
+Or you can do it like this:
+```console
+python build.py --webhook=https://discord.com/api/webhooks/2281488/something
+```
+
 After that our exe file will start to generate.
 I build this on Python 3.10, final .exe file size is **28717 KB** :floppy_disk:
 
-If you're having troubles with _build.py_ script, just edit constant inside _utils.py_:
+If you're having troubles with _build.py_ script, just edit constant inside _webhook.py_:
 ```python
 WEBHOOK = "https://discord.com/api/webhooks/2281488/something"
 ```
